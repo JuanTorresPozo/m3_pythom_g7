@@ -29,7 +29,7 @@ print(f"el numero es {nombre} \n y tu edad  es {numero}")
 print ("Tu nombre es "+nombre)
 #string.format
 print("Tu nombre es {} y tu edad es {}".format(nombre,numero))
-# formto con %: %s para string y %d numeros
+# formato con %: %s para string y %d numeros
 print("Tu nombre  es%s y tu edad es%d" % (nombre, numero))
 #metodo con cadena
 apellido = "palma loren"
