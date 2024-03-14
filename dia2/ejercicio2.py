@@ -48,8 +48,9 @@ numero2 = numero2 +100
 
 texto = "asd"
 texto = texto + "" #texto = "asd "
+print (texto)
 
-#presicion de datos
+#precision de datos
 promedio = (4+6+7)/3
 print (f"el promedio es {promedio}")
 print (f"el promedio es {promedio: .4f}")
