@@ -24,7 +24,7 @@ print (numero_hijos < 1)#True
 print (numero_hijos == 0)#true
 print (numero_hijos != 0)#false
 
-nombre= "Mijail"
+nombre = "Mijail"
 
 #comparacion entre = y ==
 
@@ -70,7 +70,9 @@ F F  F *
 # ser o no ser
 # True or False -> True
 
+"""
 -(-(-V))=
 -(-F)
 -V
 False
+"""
