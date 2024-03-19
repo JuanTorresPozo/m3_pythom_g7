@@ -4,14 +4,14 @@ cachipun= ["piedra", "papel", "tijera"]
 computador= choice(cachipun)
 # print (computador)
 
-usuario= input("Ingresar tu jugada [piedra, papel o tijera]: ")
+usuario= input("Ingresar tu jugada [piedra, papel o tijera]\n ")
 usuario= usuario.lower()
 #print(usuario.lower())
 
 while usuario !="piedra" and usuario != "papel" and usuario != "tijera":
     print("Jugada no valida")
-    usuario= input("Ingresar tu jugada [piedra, papel o tijera]")
-    
+    usuario= input("Ingresar tu jugada [piedra, papel o tijera]\n ")
+ 
 print(f"Jugaste: {usuario}")
 print(f"El computador jugó: {computador}")
 
