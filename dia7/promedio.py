@@ -22,11 +22,3 @@ while i < cant_notas:
 
 print(f"el promedio de notas es: {round(suma_notas/cant_notas,2)}")
 
-
-"""
-saludo = "hola"
-salud = Saludo + " Mundo"
-print(saludo)
-saludo += "chao"
-print (saludo)
-"""

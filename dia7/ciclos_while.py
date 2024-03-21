@@ -1,3 +1,4 @@
+
 """
  while condicion:   
     #codigo a ejecutar
@@ -36,4 +37,8 @@ while True:
 """       
 """
 """
-    
+saludo = "hola"
+saludo = saludo + " Mundo"
+print(saludo)
+saludo += " chao"
+print (saludo)  
