@@ -13,4 +13,4 @@ for posicion, numero in enumerate(lista):
         break
     else: 
         print (f"El numero no se encuentra en la posicion {posicion}\n")
-print ("Fuera del for")
+print ("Fin del programa")
