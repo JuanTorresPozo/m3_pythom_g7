@@ -18,9 +18,9 @@ for i in range(2,(2*n+2),2): #
 """ 
 print(lista_pares)
 print(lista_pares2)
+print([2*i +2 for i in range(n)])
 
-
-
+print("")
 
 ##[expresion1 if condicion1 else expresion2 for variable]
 valores = [0,4,5,7,8,9]
@@ -44,12 +44,13 @@ lista_int= []
 count_str= 0
 for elemento in lista:
     if type(elemento) is str:
-        count_str
-
-
-
-
-
+        count_str += 1
+        lista_str.append(elemento)
+    elif type(elemento) is int:
+        lista_int.append(elemento)
+print(count_str)
+print(lista_str)
+print(lista_int)
 
 
 lst_str = [elemento for elemento in lista if type(elemento) is str ]
