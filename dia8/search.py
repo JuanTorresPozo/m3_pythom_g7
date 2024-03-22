@@ -9,9 +9,8 @@ print(lista)
 for posicion, numero in enumerate(lista):
     
     if numero_buscar == numero:
-        print("Numero encontrado")
+        print(f"El numero {numero_buscar} se encuantra en la posicion {posicion}")
         break
     else: 
         print (f"El numero no se encuentra en la posicion {posicion}\n")
 print ("Fuera del for")
-print(f"El numero {numero_buscar} se encuantra en la posicion {posicion}")
