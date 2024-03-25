@@ -1,0 +1,126 @@
+"""
+LISTAS []->listas
+() ->tuplas
+{} ->
+Son contenedores de datos
+Son numerables
+conjunto de datos, separados por comas, ordenados segun su ingreso
+La primera posicion(INDICE) es cero
+"""
+lista_pares= [2,4,6,8,10]
+from os import system
+#tamaño de lista es 5
+print(lista_pares)
+#Print([2,4,6,8,10])
+#indice o posicion
+print(lista_pares[0])#2
+print(lista_pares[1])#4
+print(lista_pares[2])#6
+print(lista_pares[3])#8
+print(lista_pares[4])#10
+#print(lista_pares[5])#IndexError: list index out of range
+print("")
+print(lista_pares[-1])#5
+print(lista_pares[-2])#8
+
+lista_vacia=[]#tamaño es cero
+
+
+
+
+#METODOS
+print(lista_pares.__dir__)# <built-in method __dir__ of list object at 0x000001F0E275D900>
+print(lista_pares.__dir__())
+
+#append(dato)=>agregar un elemento al final de la lista
+lista_vacia.append("lunes")
+print(lista_vacia)
+lista_vacia.append("martes")
+lista_vacia.append("miercoles")
+print(lista_vacia)
+#insert(indice, elemento) => inserta unelemento en una posicionespecifica
+lista_vacia.insert(3,"jueves")
+print(lista_vacia)# ['lunes', 'martes', 'miercoles', 'jueves']
+system("clear")
+lista_vacia.append("viernes")
+print(lista_vacia)#['lunes', 'martes', 'miercoles', 'jueves', 'viernes']
+lista_vacia[3]="jueves"#
+
+
+
+
+
+print(lista_vacia)#
+
+
+
+#pop => saca el ulimo elemeto dentro de una lista, si no se pasa un indice
+lista_vacia.pop()
+print(lista_vacia)
+print(lista_vacia)#
+#eliminado=lista_vacia.pop(0)#lunes
+
+lista_eliminados = []
+lista_eliminados.append(lista_vacia.pop(0))
+
+#print(f"El elemento eliminado{eliminado}")
+print(lista_vacia)#["martes", "Miercoles", "Jueves"]
+print(lista_eliminados)#['Lunes']
+
+system ("cls")
+#remove(valor) => elimina el valor
+#lista_vacia.remove("Martes")
+print(lista_vacia)#(´Miercoles´,´Jueves´)
+#lista-vacia.remove("Viernes")#ValueError: list.remove(x): x not in list
+print(lista_vacia)#
+lista_vacia.remove("jueves")#elimine la primera coincidencia, de izq a derecha
+print(lista_vacia)#[´Miercoles´,´Jueves´]
+system("cls")
+
+
+lista_vacia.insert(0, "martes")
+lista_vacia.insert(0, "lunes")
+lista_vacia.append("viernes")
+lista_vacia.append("Sabado")
+lista_vacia.append("Domingo")
+
+#reverse=> invierte los elementos de la lista, el cambio es permanente
+lista_vacia.reverse()
+print(lista_vacia)#['miercoles', 'martes']
+
+#sort()=> ordena los elementos en forma ascendente/alfabeticamente
+lista_vacia.sort()
+print(lista_vacia)#
+
+lista_pares.sort()
+print(lista_pares)#[2, 4, 6, 8, 10, 13]
+
+
+#RESPALDO DE LISTA
+
+lista1 = lista_pares#[2, 4, 6, 8, 10, 13]
+#NO ES UN RESPALDO DE DATOS
+
+lista2 = lista_pares.copy()#Si es un respaldo de la lista original
+
+lista_pares.pop()
+print("lista de pares",lista_pares)#
+print(lista1)
+print(lista2)
+lista3 =lista_pares[:]
+print(lista3)
+lista4 = lista_pares + lista_vacia#Si es un respaldo de la lista ogiginal
+lista5 = lista_vacia*1#Si es un respaldo de la lista ogiginal
+lista6 = list(lista_pares)#Si es un respaldo de la lista ogiginal
+
+#sorted(lista, reverse=True),ordena descendentamente  no es permanente
+sorted(lista_pares, reverse= True)#ordena desc
+sorted(lista_pares)#ordena asc
+sorted(lista_pares, reverse= False)#ordena asc
+
+#index()=> retorna el indice del elemento que se busca en una lista
+
+print("indece del elemento 8 es: ",lista_pares.index(8))
+#print("indece del elemento 13 es: ",lista_pares.index(13)) ValueError: 13 is not in list
+lista_final =lista_pares + lista_vacia
+print("lista final", lista_final)
