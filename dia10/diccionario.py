@@ -1,74 +1,81 @@
 """
-    Diccionarios {}
-    
-    estructura de datos pares de  clave:valor
-    se accede a los elementos traves de la clave, no importa la posicion
-    las claves no se generan automaticamente, no hay un orden
-    las claves pueden ser String, numeros enteros incluso boolean
-    Los balores pueden ser numericos boolean, listas, diccionarios, otro tipo de datos
-    Si la clave existe modifica su valor , si la clave no existe la crea
-    
+Diccionarios {}
+estructura datos de pares clave:valor
+se accede a los elementos a traves de la clave, no importa la posición
+las claves no se generan automaticamente, no hay un orden
+las claves pueden ser String, numerico, incluso Boolean
+los valores pueden ser: String, numerico, boolean, listas, diccionario u otro tipo de datos
+Si la clave existe,modifico su valor, si no existe se agrega el par clave:valor
 """
-diccionario = {
-    1:"uno", 
-    "dos":2,
-    3: ["a", "b", "c"],
-    "dicc": {"A": "A Mayuscula"},
-    }
 from os import system
+diccionario = {
+    1: "uno",
+    "dos": 2,
+    3: ["a","b","c"], # lista dentro de diccionario
+    "dicc": {"A":"A Mayuscula"},
+    }
 #Diccionario vacio
 notas = {}
 print(len(notas))#cero
-
 notas = {
-"Camila": 7,
-"Antonio": 5,
-"Felipe": 6,
-"Daniela": 5,
-"Vicente": 7,
+    "Camila": 7,
+    "Antonio": 5,
+    "Felipe": 6,
+    "Daniela": 5,
+    "Vicente": 7,
+    "FELIPE": 2,
+    "Vicente": None,
 }
-system("cls")
-print(len(notas))
-print(notas)
-
-
-#Acceso a los elementos(valores)
-print(notas["Camila"])
-print(notas["Antonio"])
-print(notas["Felipe"])
-print(notas["Daniela"])
-print(notas["Vicente"])
-#print(notas["felipe"])#KeyError: 'felipe'
-
-print(len(notas))
-
-
+system("clear")
+print(len(notas))#
 print(notas)#{'Camila': 7, 'Antonio': 5, 'Felipe': 6, 'Daniela': 5, 'Vicente': 7}
-notas["julio"] = 4
-print(notas)#{'Camila': 7, 'Antonio': 5, 'Felipe': 6, 'Daniela': 5, 'Vicente': 7, 'julio': 4}
-
-#julio = {"nota1" : 7, "nota2" : 4}
-
-# Modificar par clave:valor
-notas["julio"] = 5
-{'Camilaprint(notas)#': 7, 'Antonio': 5, 'Felipe': 6, 'Daniela': 5, 'Vicente': 7, 'julio': 5}
-
-#Eliminar  par clave:valor
-#del notas ["FELIPE"]
-print(notas)#{'Camila': 7, 'Antonio': 5, 'Felipe': 6, 'Daniela': 5, 'Vicente': 7, 'julio': 5}
-#2 forma pop() -> al eliminar, capturamos el valor
-eliminado = notas.pop("Camila")
+#Acceso a los elementos(valores)
+print(notas["Camila"]) #7
+print(notas["Antonio"])#5
+print(notas["Felipe"]) #6
+print(notas["Daniela"])#5
+print(notas["Vicente"])#1 reemplaza a 7
+#print(notas["felipe"])#KeyError: 'felipe'
+print(notas)#{'Camila': 7, 'Antonio': 5, 'Felipe': 6, 'Daniela': 5, 'Vicente': 1, 'FELIPE': 2}
+notas["Julio"] = 4
+print(notas)#{'Camila': 7, 'Antonio': 5, 'Felipe': 6, 'Daniela': 5, 'Vicente': 1, 'FELIPE': 2, 'Julio': 4}
+#julio = {"nota1":7,"nota2":4}
+#Modificar par clave:valor
+notas["Julio"] = 5
+print(notas)#
+#eliminar par clave:valor
+del notas["FELIPE"]
+print(notas)#{'Camila': 7, 'Antonio': 5, 'Felipe': 6, 'Daniela': 5, 'Vicente': 1, 'Julio': 5}
+#2 forma pop()-> al eliminar, capturamos el valor
+eliminado = notas.pop("Camila") #notas["Camila"]
 print("valor eliminado : ",eliminado)#7
-print(notas)#{'Antonio': 5, 'Felipe': 6, 'Daniela': 5, 'Vicente': 7, 'julio': 5}
-
+print(notas)#{'Antonio': 5, 'Felipe': 6, 'Daniela': 5, 'Vicente': 1, 'Julio': 5}
+print("")
 notas2 = {
     "Mijail":2,
-    "Israel":1
-    
-}
-
-notas.update(notas2)
-print(notas)#{'Antonio': 5, 'Felipe': 6, 'Daniela': 5, 'Vicente': 7, 'julio': 5, 'Mijail': 2, 'Israel': 1}
+    "Israel":1,
+    "Felipe": 7,
+    }
+#notas.update(notas2)
+#print(notas)#
 notas2.update(notas)
 print(notas2)#
-#COLICIONES Al existir duplicidadde claves, se conserva
+#COLISIONES: al existir duplicidad de claves, se conserva el valor del dicionario anexado
+system("clear")
+
+print(notas2.keys())
+#dict_keys(['Mijail', 'Israel', 'Felipe', 'Antonio', 'Daniela', 'Vicente', 'Julio'])
+print(notas2.values())
+#dict_values([2, 1, 6, 5, 5, None, 5])
+
+print(type(None))#<class 'NoneType'>
+system("clear")
+print(notas2.items())
+#dict_items([('Mijail', 2), ('Israel', 1), ('Felipe', 6), ('Antonio', 5), ('Daniela', 5), ('Vicente', None), ('Julio', 5)])
+
+#get(clave)-> retorna el valor asociado a la clave
+print(notas2.get('Mijail'))#2
+#Al consultar por una clave no existente retornara por default None
+print(notas2.get('Alexis'))#None
+#Se puede especificar el valor de retorno al no existir la clave
+print(notas2.get('Alexis', "Valor no existe"))#

@@ -16,3 +16,5 @@ notas["Pedro"] = 6
 print(notas)
 
 #Eliminar elemento
+del notas ["Jose"]
+print(notas)

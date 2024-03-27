@@ -14,28 +14,30 @@ for i in range(cant_mascotas):#0,1,2
     }
 
     #Recorrer un diccionario default
-    """for clave in mascota:
+"""
+    for clave in mascota:
         #print(clave)
         mascota[clave] = input(f"Ingrese la {clave} de su mascota> ")
-    """
+"""
 
-    for key in mascota.keys():
+for key in mascota.keys():
         #print(key)
         mascota[key] = input(f"Ingrese la {key} de su mascota> ")
 
-    print(mascota)
+print(mascota)
 
-    print("")
+
+print("")
     #Accedemos a los valores en nuestro diccionario
-    for valor in mascota.values():
+for valor in mascota.values():
         print(valor)
 
-    print("")
-    for clave,valor in mascota.items():
+print("")
+for clave,valor in mascota.items():
         print(f"clave {clave} - valor {valor}")
 
 
-    mascotas[mascota["nombre"]] = mascota
+mascotas[mascota["nombre"]] = mascota
     #mascotas["zoe"] = mascota
 
 
@@ -51,6 +53,8 @@ print(mascotas)#
 #mascotas["ayun"]["nombre"]  => "ayun"
 
 #mascotas["ayun"].pop("nombre")
+
+
 
 """
 mascotas ={

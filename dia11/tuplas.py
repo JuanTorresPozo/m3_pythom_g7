@@ -11,6 +11,7 @@ tupla2 = ("nombre","Mijail")
 nom, texto = tupla2
 print(nom)
 print(texto)
+
 print(tupla2[0])#nombre
 print(tupla2[1])#Mijail
 #print(tupla2[2])#IndexError: tuple index out of range
@@ -20,6 +21,7 @@ print(tupla2[1])#Mijail
 #tupla2[1] = "hola" #TypeError: 'tuple' object does not support item assignment
 print("")
 #Iterar tupla
+
 for num in tupla1:
     print(num)
 
@@ -34,3 +36,4 @@ print(list_dicc1[0][0])#'nota1'
 print(list_dicc1[0][1])#5
 print(list_dicc1[1][0])#'nota2'
 print(list_dicc1[1][1])#6
+
