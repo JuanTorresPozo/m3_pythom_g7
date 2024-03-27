@@ -1,16 +1,17 @@
 import sys
-"""
- a Sol peruano: 0.0046 
- a Peso Argentino: 0.093 
- a Dólar Americano: 0.0013     
-"""
 
-soles_peruanos = float(sys.argv[1])
-pesos_argentinos = float(sys.argv[2])
-dolares_americanos = float(sys.argv[3])
-pesos_chilenos = float(sys.argv[4])
+# Ingreso de datos
 
-print(f"Los {pesos_chilenos} pesos equivalen a:")
-print(f"{soles_peruanos*pesos_chilenos} soles")
-print(f"{pesos_argentinos*pesos_chilenos} Pesos argentinos")
-print(f"{dolares_americanos*pesos_chilenos} Dolar Americano")
+conversion = {
+    "sol_peruano" : float(sys.argv[1]),
+    "peso_argentino" : float(sys.argv[2]),
+    "dolar_americano" : float(sys.argv[3]),
+    "pesos_chilenos" : int(sys.argv[4]),
+}
+
+#Impresion/Calculo
+
+print(f"Los {conversion ["pesos_chilenos"]} pesos Chilenos equivalen a:")
+print (f"{conversion["sol_peruano"]*conversion["pesos_chilenos"]} Soles") 
+print (f"{conversion["peso_argentino"]*conversion["pesos_chilenos"]} Pesos Argentinos") 
+print (f"{conversion["dolar_americano"]*conversion["pesos_chilenos"]} Dolares Americanos") 
