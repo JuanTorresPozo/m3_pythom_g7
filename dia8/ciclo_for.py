@@ -2,17 +2,18 @@
  CICLO FOR   
  for variables in iterable:      
 """
-#(0,1,2,3,4,5,6,7,8,9)
+#range() genera un espacio con un rango de numeros #(0,1,2,3,4,5,6,7,8,9)
+
 for i in range (10):
     print (i)
 print("")
 
-#4,5,6,7,8,9
+#Rango de numeros partiendo del primero del rango hasta (n-1) #4,5,6,7,8,9
 for i in range (4,10):
     print (i)
 print("")
 
-#4,5,6,8
+#Rango de numeros partiendo del primero del rango hasta (n-1) de 2 en 2 #4,6,8
 for i in range (4,10,2):
     print (i)
 print("")
@@ -31,7 +32,7 @@ for numero in numeros:
             
 print("")
  
- #String -> son si,ilares a las listas
+ #String -> son similares a las listas
 texto = "Hola Mundo"
 for caracter in texto:
     print(caracter)
@@ -57,23 +58,29 @@ for clave in datos_personales:
 
 print("")  
 
+print("**Items**")
 #imprime clave, valor   
 for clave,valor in datos_personales.items():
     print(f"clave: {clave} - valor: {valor}")#  
-      
+
+print("**Par**")     
 
 for par in datos_personales.items():
     print(par)#
 
 print("")
+
+print("**Keys**")
+
 for clave in datos_personales.keys():
     print(clave)#
       
 print("")
+print("**vALUES**")
 for valor in datos_personales.values():
     print(valor)#
 print("")  
-#ENUMERATE
+print("**ENUMERATE**") #ENUMERATE
 for posicion, caracter in enumerate(texto):
     print(f"la posicion {posicion} del caracter {caracter}")
     
