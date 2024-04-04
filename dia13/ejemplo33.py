@@ -10,3 +10,4 @@ def filtrar(precios, umbral):
     return filtro
 
 filtrar(precios, 12000)
+print ([filtrar])
