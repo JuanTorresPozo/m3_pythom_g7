@@ -19,16 +19,16 @@ print (imagen)
 '<img scr="foto">'
 
 html_template = Template('''<!DOCTYPE html>
-<html>
-<head>
-<title>FOTOS</title>
-</head>
-<body>
-<h1>Nuestra pagina Web</h1>
-$body
-</body>
-</html>
-''')
+                        <html>
+                        <head>
+                        <title>FOTOS</title>
+                        </head>
+                        <body>
+                        <h1>Nuestra pagina Web</h1>
+                        $body
+                        </body>
+                        </html>
+                        ''')
 lista_ulr = [elemento['ulr'] for elemento in out]
 texto_imagen = ""
 for url in lista_ulr:
