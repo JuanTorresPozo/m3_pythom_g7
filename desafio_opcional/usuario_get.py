@@ -13,7 +13,6 @@ user_data=response.text
 
 if response.status_code == 200:
     print (user_data)
-    user_data = response.json
-    
+      
 else:
     print("Error en la solicitud, response.status_code")
