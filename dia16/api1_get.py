@@ -21,4 +21,4 @@ if response.status_code == 200:#200 OK
         print(f"diccionario {dicc}")
         
 else :
-    print("Error en la solicitud, response.statuscode")
+    print("Error en la solicitud, response.status_code")
