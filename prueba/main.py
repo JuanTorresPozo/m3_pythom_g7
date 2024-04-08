@@ -22,6 +22,6 @@ if __name__ == "__main__":
     html = crear_html(url)
     print(type(template.html))
     
-    archivo = open("index2.html","w")
+    archivo = open("index.html","w")
     archivo.write(html)
     
