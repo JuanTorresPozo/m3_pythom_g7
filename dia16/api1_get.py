@@ -2,14 +2,8 @@ import requests, json
 
 url = "https://jsonplaceholder.typicode.com/posts"
 
-payload = {}#datos a enviar
-headers = {}#formato o tipo de dato
-
-#response = requests.request("GET", url, headers=headers, data=payload)
-
 response = requests.get(url)
 
-print(response.text)
 print("")
 print(response)#<Response [200]
 
